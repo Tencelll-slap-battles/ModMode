@@ -1,0 +1,87 @@
+name: StaffPlugin
+version: 2.0.0
+main: dev.staffplugin.StaffPlugin
+api-version: '1.21'
+description: Custom staff command system
+
+# All commands are registered under the "staffplugin" namespace.
+# This means they are ONLY accessible as /staffplugin:<command>
+# e.g. /staffplugin:gamemode, /staffplugin:tp, /staffplugin:kill
+# The plain /gamemode, /tp, /kill etc. remain pure vanilla.
+
+commands:
+  staff:
+    description: Manage staff members
+    usage: /staffplugin:staff <player> | add <player> <cmd> | remove <player> <cmd>
+    permission: staffplugin.op
+    aliases: []
+  unstaff:
+    description: Remove staff from a player
+    usage: /staffplugin:unstaff <player>
+    permission: staffplugin.op
+    aliases: []
+  modmode:
+    description: Toggle mod mode
+    usage: /staffplugin:modmode
+    aliases: []
+  to:
+    description: Teleport to a player
+    usage: /staffplugin:to <player>
+    aliases: []
+  bring:
+    description: Bring player(s) to you
+    usage: /staffplugin:bring <player|selector> [...]
+    aliases: []
+  tp:
+    description: Teleport to coordinates
+    usage: /staffplugin:tp <x> <y> <z>
+    aliases: []
+  kill:
+    description: Kill player(s) or entities
+    usage: /staffplugin:kill <player|selector> [...]
+    aliases: []
+  kick:
+    description: Kick a player
+    usage: /staffplugin:kick <player|selector> [message]
+    aliases: []
+  ban:
+    description: Ban a player
+    usage: /staffplugin:ban <player> [message]
+    aliases: []
+  title:
+    description: Show a title to player(s)
+    usage: /staffplugin:title <player|selector> <text>
+    aliases: []
+  freeze:
+    description: Freeze a player
+    usage: /staffplugin:freeze <player|selector>
+    aliases: []
+  unfreeze:
+    description: Unfreeze a player
+    usage: /staffplugin:unfreeze <player|selector>
+    aliases: []
+  gamemode:
+    description: Change your gamemode (staff version)
+    usage: /staffplugin:gamemode <survival|creative|spectator>
+    aliases: []
+  invsee:
+    description: View and edit a player's inventory
+    usage: /staffplugin:invsee <player>
+    aliases: []
+  give:
+    description: Give item(s) to player(s)
+    usage: /staffplugin:give <player|selector> <item> [amount]
+    aliases: []
+  sudo:
+    description: Force a player to send a chat message
+    usage: /staffplugin:sudo <player|selector> <message>
+    aliases: []
+  glow:
+    description: Toggle moderating visuals (glow, nametag, announcement)
+    usage: /staffplugin:glow <on|off>
+    aliases: []
+
+permissions:
+  staffplugin.op:
+    description: Full access to staff management commands
+    default: op
