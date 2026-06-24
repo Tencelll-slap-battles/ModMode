@@ -1,0 +1,65 @@
+name: StaffPlugin
+version: 2.0.0
+main: dev.staffplugin.StaffPlugin
+api-version: '1.21'
+description: Custom staff command system
+
+commands:
+  staff:
+    description: Manage staff members
+    usage: /staff <player> | add <player> <cmd> | remove <player> <cmd>
+    permission: staffplugin.op
+  unstaff:
+    description: Remove staff from a player
+    usage: /unstaff <player>
+    permission: staffplugin.op
+  modmodmode:
+    description: Toggle mod mode
+    usage: /modmodmode
+  modto:
+    description: Teleport to a player
+    usage: /modto <player>
+  modbring:
+    description: Bring player(s) to you
+    usage: /modbring <player|selector> [...]
+  modtp:
+    description: Teleport to coordinates
+    usage: /modtp <x> <y> <z>
+  modkill:
+    description: Kill player(s) or entities
+    usage: /modkill <player|selector> [...]
+  modkick:
+    description: Kick a player
+    usage: /modkick <player|selector> [message]
+  modban:
+    description: Ban a player
+    usage: /modban <player> [message]
+  modtitle:
+    description: Show a title to player(s)
+    usage: /modtitle <player|selector> <text>
+  modfreeze:
+    description: Freeze a player
+    usage: /modfreeze <player|selector>
+  modunfreeze:
+    description: Unfreeze a player
+    usage: /modunfreeze <player|selector>
+  modgamemode:
+    description: Change your gamemode
+    usage: /modgamemode <survival|creative|spectator>
+  modinvsee:
+    description: View and edit a player's inventory
+    usage: /modinvsee <player>
+  modgive:
+    description: Give item(s) to player(s)
+    usage: /modgive <player|selector> <item> [amount]
+  modsudo:
+    description: Force a player to send a chat message
+    usage: /modsudo <player|selector> <message>
+  modglow:
+    description: Toggle moderating visuals
+    usage: /modglow <on|off>
+
+permissions:
+  staffplugin.op:
+    description: Full access to staff management commands
+    default: op
